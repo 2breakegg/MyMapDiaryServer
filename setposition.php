@@ -5,6 +5,9 @@
   $userid=$_POST["userid"];
   $lat=$_POST["lat"];
   $lon=$_POST["lon"];
+
+  if($userid==-1) 
+    die();
   
   
   $mysql_qry="INSERT INTO positionlog VALUES($lat,$lon,NOW(),$userid)";
